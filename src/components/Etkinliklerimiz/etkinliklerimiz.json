@@ -3,33 +3,33 @@
     "id":1,
     "title": "Gelin Alma",
     "description": "Gelin alma performansı, damat beyin gelişi ile başlayıp gelin hanımın evden çıkışı ile devam eder.",
-    "img":"gelinalma"
+    "img":"varil"
   },
 
   {
     "id":2,
     "title": "Nikah Töreni",
     "description": "Çiftimiz ile nikah alanına girerek başladığımız bu performansımız çiftimizin 'Evet!' ifadeleriyle devam eder daha sonrasında çiftimizin dansıyla birlikte sonlanır.",
-    "img":"nikahtoreni"
+    "img":"varil"
   },
   {
     "id":3,
     "title": "Düğün Girişi",
     "description": "Çiftimiz ile düğün salonuna girerek başladığımız bu performansımız, çiftimiz danslarına başlayana kadar devam eder.",
-    "img":"dugungirisi"
+    "img":"varil"
   },
   
   {
     "id":4,
     "title": "Pasta Kesimi",
     "description": "Düğün pastası ile birlikte giriş yaptığımız bu performansımızda pasta kesilip çiftin birbirine ikramlarından sonra eğlence, oyun havaları ile devam eder.",
-    "img":"pastakesimi"
+    "img":"varil"
   },
   
   {
     "id":5,
     "title": "Kına",
     "description": "Damat beyin arkadaşları ile birlikte kına gecesine girişleri sırasında başlayan bu performansımız, eğlenceli şarkılar ve oyun havaları ile devam eder.",
-    "img":"kina"
+    "img":"varil"
   }
 ]

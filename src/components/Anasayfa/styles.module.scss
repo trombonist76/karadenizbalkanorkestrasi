@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Beau+Rivage&display=swap');
 
 :root {
   --background: rgb(67, 67, 255,0); 
@@ -9,178 +9,12 @@
 }
 
 [data-theme="dark"] {
-  --background: #004e8a;
+  --background: #000000;
   --text-primary: rgb(255, 255, 255);
   --text-secondary: grey;
   --accent: darkred;
   --event-background: #001219;
 }
-
-.backgroundVideo{
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  min-width: 100%;
-  min-height: 100%;
-}
-
-.title{
-    font-size: 4rem;
-    font-weight:bolder;
-    // animation: move 1.5s ease-in-out;
-}
-
-.titleDown{
-    font-size: 4rem;
-    font-weight:bolder;
-    // animation: movedown 1.5s ease-in-out;
-}
-
-
-.titleStrong{
-    font-size: 4rem;
-    font-weight:bolder;
-    animation: fade 3s ease-in-out;
-    
-}
-
-.note{
-  padding-bottom: 12px;
-  animation: movedown3 3s;
-}
-
-
-.images{
-  align-items: center;
-  position: relative;
-  padding-top:30%
-}
-
-.image{
-  position: absolute;
-
-
-}
-
-.image img{
-  transition: all ease-in .4s;
-  border-radius: 10px;
-  height: 400px;
-  width: 600px;
-}
-
-.image:hover{
-  z-index: 1;
-}
-
-.image img:hover{
-  transform: scale(1.1,1.1);
-  z-index: 1;
-}
-
-.image:nth-child(1){
-  transform-origin: top right;
-  animation: rotate 1s;
-  transform: rotate(-10deg);
-  
-}
-.image:nth-child(2){
-  transform-origin: top right;
-  animation: rotate 2s;
-  transform: rotate(10deg);
-}
-
-.image:nth-child(3){
-  transform-origin: top right;
-  animation: rotate 3s ;
-  transform: rotate(30deg);
-
-}
-
-
-
-
-@keyframes scale {
-  0% {
-    transform: scale(0,0);
-  }
-
-  100% {
-    transform: scale(1.5,1.5);
-  }
-}
-
-
-@keyframes rotate {
-  0% {
-    transform: rotate(100deg);
-  }
-}
-
-@keyframes move {
-  0% {
-    transform: translate(50%, 0);
-  }
-  50% {
-    text-shadow: 0 25px 50px rgba(0, 0, 0, 0.75);
-  }
-  100% {
-    transform: translate(0%, 0);
-  }
-}
-
-@keyframes movedown {
-  0% {
-    transform: translate(0, 70%);
-  }
-  50% {
-    text-shadow: 0 25px 50px rgba(0, 0, 0, 0.75);
-  }
-  100% {
-    transform: translate(0, 0%);
-  }
-}
-
-@keyframes fade {
-  0% {
-    color: rgba(0, 0, 0, 0);
-  } 
-
-  
-  40% {
-    color: rgba(0, 0, 0, 0);
-    text-shadow: 0 25px 50px rgba(0, 0, 0, 0);
-  } 
-
-  70% {
-    font-size: 6rem;
-    text-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
-    color:red
-  } 
-
-}
-
-@keyframes movedown3 {
-  0%{
-    visibility: hidden;
-  }
-
-  60%{
-    visibility: hidden;
-    transform: translate(0,-300%);
-  } 
-
-  70%{
-    transform: translate(0,0);
-    transform: rotateX(60deg);
-  } 
-
-  80%{
-    transform: translate(0,-80%);
-  } 
- 
-}
-
 
 
 //Card Styles
@@ -278,4 +112,52 @@
   transform: scale(1.5,1.5);
   border-radius: 10px;
 }
+
+
+
+
+
+
+
+
+//Info
+
+.info{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  height: 80%;
+}
+
+.infoContent{
+  line-height:0.9;
+}
+
+.handWritten{
+  margin-top: 30px;
+  font-family: 'Beau Rivage', cursive;
+  font-size: 4em;
+}
+
+
+.title{
+  font-size: 5em;
+  
+}
+
+.infoImg img{
+max-width: 100%;
+max-height: 100%;
+object-fit: cover;
+opacity:0.8
+}
+
+.infoBtn{
+  display: flex;
+  justify-content: space-around;
+}
+
+
+
 

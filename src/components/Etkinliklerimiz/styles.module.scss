@@ -1,0 +1,94 @@
+
+:root {
+    --text-primary: black;
+    --text-secondary:white;
+    --accent: purple;
+    --event-background:#ecf8f8
+  }
+  [data-theme='dark'] {
+    --text-primary: #fff;
+    --text-secondary: black;
+    --accent: darkred;
+    --event-background:#ffffff
+  }
+
+
+.events{
+    margin-top: 200px;
+    padding-bottom: 850px;
+}
+
+.pageTitle{
+    text-align: center;
+    color:var(--text-primary)
+}
+.container {
+    margin-top: 160px;
+    position: absolute;
+    display: flex;
+  }
+ 
+  .card {
+    background-color:var(--event-background);
+    display: flex;
+    flex-direction: column;
+    height: 600px;
+    border-radius: 10px;
+    box-shadow: -1rem 0 3rem #000;
+    transition: 0.4s ease-out;
+    position: relative;
+    left: 0px;
+  }
+
+  .cardBody {
+    padding: 40px;
+  }
+  
+  .card:not(:first-child) {
+
+    margin-left: -60px;
+  }
+  
+  .card:hover {
+    transform: translateY(-50px);
+    transition: 0.4s ease-out;
+  }
+  
+  .card:hover ~ .card {
+    position: relative;
+    left: 70px;
+    transition: 0.4s ease-out;
+  }
+  
+  .title {
+    text-align: center;
+    margin: 30px 0;
+    font-size: 2rem;
+
+  }
+  
+  .card:hover .filledbar {
+    width: 120px;
+    transition: 0.4s ease-out;
+  }
+  
+  
+  .stroke {
+    stroke: white;
+    stroke-dasharray: 360;
+    stroke-dashoffset: 360;
+    transition: 0.6s ease-out;
+  }
+  
+  .card:hover .stroke {
+    stroke-dashoffset: 100;
+    transition: 0.6s ease-out;
+  }
+
+  .image{
+      max-width: 100%;
+  }
+
+  .description{
+      color:var(--text-secondary)
+  }

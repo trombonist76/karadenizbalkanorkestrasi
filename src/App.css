@@ -1,5 +1,6 @@
 @import-normalize;
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@1,800&family=Sora:wght@600&display=swap');
+
 
 :root {
   --background: rgb(67, 67, 255,0); 
@@ -9,16 +10,13 @@
   --event-background:#ecf8f8
 }
 [data-theme='dark'] {
-  --background: #004e8a;
+  --background: #000000;
   --text-primary: rgb(255, 255, 255);
   --text-secondary: grey;
   --accent: darkred;
   --event-background:#001219
 }
 
-body > #root > div {
-  height: 300vh;
-}
 
 *{
   color:var(--text-primary);
@@ -27,24 +25,22 @@ body > #root > div {
 
 .App{
   background-color: var(--background);
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Sora', sans-serif;
   width: 100%;
   height: 100%;
 }
 
 .nav{
+  padding: 20px;
   background-color: rgba(0, 0, 0, 0);
   display: flex;
-  height: 100px;
+  width: 100%;
   align-items: center;
   justify-content: space-around;
-  position: sticky;
-  top: 0%;
+  position:absolute;
   z-index: 1;
   
 }
-
-
 
 .title{
   padding-left: 1.5em;
@@ -53,8 +49,8 @@ body > #root > div {
 
 .nav-items{
   display: flex;
-  justify-content: space-around;
-  align-self: center;
+  justify-content: center;
+  padding-right: 30px;
 }
 
 .navBtn{
@@ -95,78 +91,3 @@ body > #root > div {
 .logo{
   width: 100px;
 }
-
-.events{
-  display: flex;
-  flex-direction: column;
-  padding-top: 3em;
-  color: var(--text-primary);
-}
-
-.event{
-  display: flex;
-  background-color: var(--event-background);
-  border-radius: 10px;
-  box-shadow: -1rem 0 3rem #000;
-/*   margin-left: -50px; */
-  transition: 0.4s ease-out;
-  position: relative;
-  left: 0px;
-  border-left: 10px;
-  
-  align-items: center;
-  justify-content: center;
-  box-sizing: border-box;
-  margin: 1px;
-  
-}
-
-
-.event:hover {
-  transform: translateX(-40px);
-  transition: 0.4s ease-out;
-  border-left: 10px solid ;
-
-}
-
-.event:hover ~ .event {
-  position: relative;
-  left: 100px;
-  transition: 0.4s ease-out;
-
-}
-
-.event:not(:first-child) {
-  margin-top: -50px;
-}
-
-.event h3{
-  color: var(--text-primary);
-  border-right: 2px solid red;
-
-}
-
-.eventTitle{
-  color: white;
-  font-weight:bolder;
-  padding: 20px 30px 25px 20px;
-  margin-left: 20px;
-}
-
-.eventImage{
-
-  max-width: 100%;
-  max-height: 100%;
-}
-
-.eventDescs{
-  margin: auto;
-  font-size: 16px;
-  
-  
-}
-
-
-
-
-

@@ -1,0 +1,26 @@
+
+.backgroundVideo{
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  
+}
+
+.backgroundVideo video{
+  position: absolute;
+}
+
+  
+.icon{
+  margin-top: 10px;
+  color: white !important;
+}
+
+
+.iconWrapper{
+      display: flex;
+      flex-direction: column;
+      height: 80vh;
+      justify-content: flex-end;
+
+}

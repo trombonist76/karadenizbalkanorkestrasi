@@ -1,68 +1,56 @@
 import React from 'react'
-import { Col, Row } from 'antd'
 import getAllImages from '../../fetchImages'
+import BgVideo from '../BgVideo'
 import styles from "./styles.module.scss"
-import { useTheme } from "../../contexts/ThemeContext"
-import ImageGallery from './ImageGallery'
-import Gallery from './Gallery'
-import { BiVolumeMute } from "react-icons/bi";
-import varil from "../../videos/varil.mp4"
+import { Col, Row, Button } from 'antd'
+import { BsChevronDown } from "react-icons/bs"
+import Etkinliklerimiz from "../Etkinliklerimiz"
+import { useRefContext } from '../../contexts/RefContext'
+
 export default function Anasayfa() {
-  const { theme } = useTheme()
   const images = getAllImages() //useMemo
-
-
+  const {info,events,toScroll} = useRefContext()
+  const handleClick = (ref) => {
+    toScroll(ref)
+  }
   return (
-    <div className={styles.carousel}>
-      <video className={styles.backgroundVideo} loop autoPlay>
-        <source src={varil} type="video/mp4" />
-      </video>
+    <div>
+      <BgVideo handleClick={()=>handleClick(info)} />
+
       <Row>
-        <Col className={styles.firstSection} span={10}>
-{/* 
+        <Col span={14} offset={1}>
+          <div ref={info} className={styles.info}>
+            <div className={styles.infoContent}>
+              <div className={styles.title}>Karadeniz Balkan
+                <div>Orkestrası</div>
+              </div>
+            </div>
+              <div className={styles.handWritten}>
+                En mutlu günlerinize notalarımızla şenlik katıyoruz.
+              </div>
 
-
-          <div className={styles.title} >
-            EN GÜZEL GÜNLERİNİZE
           </div>
 
-          <div className={styles.title} >
-            N<HiOutlineMusicNote className={styles.note} />TALARIMIZLA
-          </div>
 
-          <div className={styles.titleStrong} >
-            ŞENLİK
+          <div className={styles.infoBtn}>
+            <Button onClick={()=>handleClick(events)} type="primary" ghost size="large" shape="circle" icon={<BsChevronDown />} />
           </div>
-
-          <div className={styles.titleDown} >
-            KATIYORUZ.
-          </div> */}
 
         </Col>
 
-        {/* <Col span={10} offset={4}>
-          <div className={styles.images}>
-            <div className={styles.image}>
-              <img src={require(`../../images/pastakesimi.jpg`)} />
-            </div>
-
-            <div className={styles.image}>
-              <img src={require(`../../images/kina.jpg`)} />
-            </div>
-
-            <div className={styles.image}>
-              <img src={require(`../../images/gelinalma.jpg`)} />
-            </div>
-
+        <Col span={9}>
+          <div className={styles.infoImg}>
+            <img src={require("../../images/varil2.JPG")} />
           </div>
-        </Col> */}
+
+        </Col>
       </Row>
 
-      <Gallery></Gallery>
-      <ImageGallery></ImageGallery>
 
 
-
+      <div ref={events} >
+        <Etkinliklerimiz /> 
+      </div>
     </div>
   )
 }
