@@ -22,7 +22,7 @@ export default function BgVideo({handleClick}) {
         <Col span={1} offset={23} data-aos="fade-up">
           <div className={styles.iconWrapper}>
             <Button onClick={handleMute} className={styles.icon} type="primary" size="large" shape="circle" icon={isMuted?<FaVolumeUp/> :<FaVolumeMute />} />
-            <Button onClick={handleClick} className={styles.icon} type="primary" ghost size="large" shape="circle" icon={<BsChevronDown />} />
+            <Button onClick={handleClick} className={styles.icon} type="primary" size="large" shape="circle" icon={<BsChevronDown />} />
           </div>
         </Col>
       </div>

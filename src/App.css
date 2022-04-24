@@ -17,8 +17,23 @@
   --event-background:#001219
 }
 
+.ant-btn.ant-btn-primary {
+  background-color: #000000;
+  border: none;
+}
 
-*{
+.ant-btn.ant-btn-primary:hover {
+  border: none;
+  background-color: #001d3d;
+}
+
+.ant-btn.ant-btn-primary:focus {
+  border: none;
+  background-color: #000;
+}
+
+
+h1 h2 h3 p{
   color:var(--text-primary);
 }
 
