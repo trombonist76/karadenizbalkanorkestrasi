@@ -1,0 +1,80 @@
+.carousel{
+    height: 100vh;
+    margin-top: 100px;
+    position: relative;
+
+    .events{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .arrow{
+        color:black !important;
+        font-size: 1.3rem;
+    }
+    .rArrow{
+        position: absolute;
+        right: 30px ;
+    }
+
+    .lArrow{
+        position: absolute;
+        left: 30px;
+        
+    }
+    
+}
+
+.event{
+    padding: 30px;
+    width: 300px;
+    height:500px;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    background-color: #bde0fe;
+    border: 1px solid;
+    position: relative;
+    transition: all 300ms;
+    & span{
+        margin-top:40px;
+    }
+}
+
+.active{
+    z-index: 1;
+    transition: all 300ms;
+    transform: perspective(300px) translate3d(0, 0, 50px);
+}
+
+
+
+.b1{
+    transform: perspective(1300px) rotate3d(0, 1, 0, -30deg);
+    z-index: -1;
+    
+}
+
+.b2{
+    transform: perspective(4000px) translate3d(150px,0,-600px) rotate3d(0, 1, 0, -72deg);
+    opacity: 0.7;
+    z-index: -2;
+    
+}
+
+.a1{
+    transform: perspective(1300px) translate3d(-100px, 0, 30px);
+    transform: perspective(1300px) rotate3d(0, 1, 0, 30deg);
+    z-index: -1;
+}
+
+.a2{
+    transform: perspective(4000px) translate3d(-150px,0,-600px) rotate3d(0, 1, 0, 72deg);
+    opacity: 0.5;
+    z-index: -2;
+
+}
+
+
+
+

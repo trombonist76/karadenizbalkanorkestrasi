@@ -21,27 +21,20 @@ export default function Etkinliklerimiz() {
 
   return (
     <div className={styles.events}>
-      <h1 className={styles.pageTitle}>ETKİNLİKLERİMİZ</h1>
-      <Col span={16} offset={4}>
-        <div class={styles.container}>
-          {events.map(event => (
+      <div className={styles.images}></div>
+        <div className={styles.image}><span>GELİN ÇIKARMA</span></div>
+        <div className={styles.image}><span>GELİN ÇIKARMA</span></div>
+        <div className={styles.image}><span>GELİN ÇIKARMA</span></div>
+        <div className={styles.image}><span>GELİN ÇIKARMA</span></div>
+        <div className={styles.image}><span>GELİN ÇIKARMA</span></div>
 
-            <div className={styles.card}>
-              <img className={styles.image} src={require('../../images/varil.jpg')} />
-              <div className={styles.cardBody}>
-                <h3 className={styles.title}>{event.title}</h3>
-                <div className={styles.bar}>
-                  <div className={styles.emptyBar}></div>
-                  <div className={styles.filledBar}></div>
-                </div>
-                <div>
-                  <p className={styles.description}>{event.description}</p>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-        </Col>
+      <div className={styles.content}>
+        <h1>ETKİNLİKLERİMİZ</h1>
+        <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt commodi impedit fugit itaque eos deserunt provident adipisci? Esse, sapiente nulla dolor eum quaerat laborum mollitia illo eaque cumque nisi libero!
+        Sit ut fugiat voluptates, a atque iure accusamus quasi possimus debitis blanditiis harum sunt perferendis iste, repellendus nam rerum totam ea maxime quas similique consectetur iusto. Recusandae, nihil? Exercitationem, tempora.</span>
+      </div>
+  
+      
     </div>
   )
 }

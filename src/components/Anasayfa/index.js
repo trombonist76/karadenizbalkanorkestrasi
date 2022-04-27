@@ -8,6 +8,7 @@ import { IconContext } from "react-icons"
 import Etkinliklerimiz from "../Etkinliklerimiz"
 import { useRefContext } from '../../contexts/RefContext'
 import Hakkimizda from '../Hakkimizda'
+import Carousel from '../Carousel'
 
 export default function Anasayfa() {
   const images = getAllImages() //useMemo
@@ -49,7 +50,7 @@ export default function Anasayfa() {
           </Col>
         </Row>
         <div ref={events} >
-          <Hakkimizda />
+          <Carousel />
         </div>
       </div>
     </IconContext.Provider>
